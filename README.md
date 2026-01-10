@@ -1,6 +1,3 @@
-# .ani Files
-They're to add the GIF of the floaty animals to your cursor (you can see them in the GIF below). It's the format Windows uses, for Linux you'll have to convert them to XCursor files. I used win2xcur for this. Know that if you want to use the .ani files on Windows, the cursor ends up being so small, it's probably not worth it. I'll eventually upload the XCursor files as well, you can either make a new cursor theme or just replace the default files. If you need help with this, feel free to ping me in the discord channel.
-
 # sddm-theme
 Re-name this folder and put it in your SDDM theme folder to get the user login screen. This is what it looks like. It's made for 1920x1080 screens, I have no clue how it looks on other resolutions. Sorry if it doesn't work on them.
 
