@@ -1,16 +1,14 @@
 [SddmGreeterTheme]
-Name=Sugar Dark
-Description=The sweetest theme around; Dark!
-Author=Marian Arlt
-Copyright=Copyright (C) 2018 Marian Arlt
-License=GPL-3.0-or-later
+Name=SanctuaryOS
+Description=Dusqk and Eleanor say hello!
+Author=arcanopulse
+Copyright=None
+License=None
 Type=sddm-theme
-Version=1.2
-Website=https://github.com/MarianArlt/sddm-sugar-dark
-Screenshot=Preview.png
+Version=1.0
 MainScript=Main.qml
 ConfigFile=theme.conf
 TranslationsDirectory=translations
-Email=marianarlt@icloud.com
-Theme-Id=sugar-dark
+Email=admin@arcanopulse.org
+Theme-Id=sanctuary-os
 Theme-API=2.11
