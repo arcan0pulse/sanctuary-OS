@@ -5,6 +5,9 @@ Config files for [CAVA](https://github.com/karlstav/cava). Unless you know what 
 Config files for a set of desktop widgets. I only tested them for 1920x1080 monitors, it may look a bit small on higher resolutions.
 For the CAVA audio visualizer to properly work, CAVA needs to be running with the config from this repository, as well as `audio_visualizer.py`
 inside of `eww/scripts`.
+
+<img width="200" height="400" alt="eww" src="https://github.com/user-attachments/assets/ca425c05-8126-4dfb-bad9-4be8b97b10e9" />
+
 I'm not sure if the temperature readings will work on a different computer than mine.
 There are a few packages that you will need to run it:
  - `lm-sensors`
