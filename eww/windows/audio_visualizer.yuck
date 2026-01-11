@@ -1,0 +1,33 @@
+(defwindow audio_status
+  :anchor "top right"
+  :geometry (geometry :x "79px" :y "288px" :width "250px" :height "40px")
+  :stacking "bg"
+  :monitor 0
+  :exclusive false
+  :focusable false
+
+  (box :orientation "vertical" :halign "end"
+(label :text ascii_audio_status :class "ascii-core-status")
+
+  )
+)
+
+(defwindow visualizer_window
+  :monitor 0
+  :geometry (geometry :x 38 :y 143 :width 340 :height 150)
+  :layer "bottom"
+  :stacking "bg"
+  :focusable false
+  :window-type "wayland"
+  :anchor [ "top center" ]
+  (audio-visualizer))
+  
+  (defwidget audio-visualizer []
+  (box
+    :class "visualizer-outer-frame"
+    (box
+      :class "visualizer-inner-frame"
+      (label
+        :text visualizer_content
+        :markup true
+        :class "visualizer-text"))))

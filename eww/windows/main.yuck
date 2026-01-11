@@ -1,0 +1,50 @@
+(defwindow main
+  :geometry (geometry :x "5px"
+                      :y "0px"
+                      :height "93%"
+                      :anchor "center right"
+                      :width "500px"
+                      :hexpand false)
+  :monitor 0
+  :focusable false
+  :exclusive false
+  :stacking "bottom"
+  (box
+    :orientation "vertical"
+    :hexpand false
+    (box
+      :orientation "vertical"
+      (box 
+        :orientation "vertical"
+        (label :text "SANCTUARY/OS MAINFRAME" :style "font-size: 14px;")
+        (label :text "NOW PLAYING: ${current_song}")
+      )
+      (audio-visualizer)
+    )
+    (box
+      :orientation "vertical"
+      :spacing 0
+      (box
+        :orientation "horizontal"
+        (uptime_widget)
+        (power_widget))
+      (label :text
+"          #########  ###    ###  ########   ########    ###    ###
+         ###    ### ###    ### ###    ### ###    ###   ###   ###  
+        ###    ### ###    ### ###        ###    ###   ###  ###    
+       ###    ### ###    ### ########## ###    ###   #######      
+      ###    ### ###    ###        ### ###    ###   ###  ###      
+     ###    ### ###    ### ###    ### ###    ###   ###   ###      
+    #########   ########   ########   ########### ###    ###      ")
+      (box
+        :orientation "horizontal"
+        (cpu_temp_widget)
+        (gpu_temp_widget))
+    )
+    (box
+      :orientation "horizontal"
+      :spacing 0
+      (cpu_widget)
+      (ram_widget)
+      (storage_widget)
+    )))

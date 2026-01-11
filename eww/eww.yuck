@@ -1,0 +1,42 @@
+;; Include widget & window files
+(include "widgets/system_info.yuck")
+(include "windows/audio_visualizer.yuck")
+(include "windows/audio_status.yuck")
+(include "windows/main.yuck")
+
+;; Polling scripts
+(defpoll cpu_usage :interval "3s" :type number "bash ~/.config/eww/scripts/cpu_usage.sh")
+(defpoll ram_usage :interval "3s" :type number "bash ~/.config/eww/scripts/ram_usage.sh")
+(defpoll storage :interval "60s" :type number "bash ~/.config/eww/scripts/storage_usage.sh")
+(defpoll uptime :interval "60s" "bash ~/.config/eww/scripts/uptime.sh")
+(defpoll storage_usage :interval "60s" :type number "bash ~/.config/eww/scripts/storage_usage.sh")
+(defpoll cpu_temp :interval "5s" :type number "bash ~/.config/eww/scripts/cpu_temp.sh")
+(defpoll gpu_temp :interval "5s" :type number "bash ~/.config/eww/scripts/gpu_temp.sh")
+(defpoll power_draw :interval "5s" :type number "bash ~/.config/eww/scripts/power_draw.sh")
+(deflisten cava_output :initial "" "bash ~/.config/eww/scripts/cava_output.sh")
+(defpoll visualizer_gen     :interval "0.05s" "cat /tmp/visualizer.txt || echo 'null'")
+(defpoll visualizer_content :interval "0.05s" "cat /tmp/visualizer.txt || echo '----------------------------standby--------------------------'")
+(defpoll ascii_audio_status :interval "2s" "bash ~/.config/eww/scripts/audio/audio_cava_status.sh || echo 'null'")
+(defpoll current_song :interval "3s" "bash ~/.config/eww/scripts/current_song.sh")
+
+;; Polling for text color changes
+(defpoll cpu_color :interval "1s"
+  "bash -c '
+    TEMP=$(bash ~/.config/eww/scripts/cpu_temp.sh | tr -dc \"0-9\")
+    if [ \"$TEMP\" -gt 80 ]; then
+      echo \"color: #FF0000\"
+    elif [ \"$TEMP\" -gt 60 ]; then
+      echo \"color: #FFA500\"
+    else
+      echo \"\"
+    fi
+  '")
+
+(defwidget audio-visualizer []
+  (box :class "outer-frame"
+    (box :class "inner-frame"
+      (box :class "visualizer-container"
+        (label
+          :text visualizer_content
+          :markup true
+          :class "visualizer-text")))))

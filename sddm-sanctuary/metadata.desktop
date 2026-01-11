@@ -1,0 +1,16 @@
+[SddmGreeterTheme]
+Name=SanctuaryOS
+Description=Contact arcanopulse on Discord if you have questions
+Author=Marian Arlt
+Copyright=Copyright (C) DUSQK
+License=GPL-3.0-or-later
+Type=sddm-theme
+Version=1.20
+Website=https://github.com/arcan0pulse/sanctuary-OS
+Screenshot=Preview.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Email=admin@arcanopulse.org
+Theme-Id=sanctuaryOS
+Theme-API=2.11

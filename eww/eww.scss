@@ -1,0 +1,64 @@
+window {
+  background: linear-gradient(to bottom, rgb(255, 255, 255), #becce8);
+  border: 4px solid white;
+  border-image: linear-gradient(125deg, #7383c7,#95b6de) 1;
+  color: #537ccc;
+  font-family: "monospace";
+  font-size: 11px;
+}
+
+progress {
+  background-color: rgb(60, 255, 220);
+  min-width: 30px;
+}
+
+progressbar > * {
+  min-width: 30px;
+  border-radius: 0;
+}
+
+progressbar {
+  min-height: 20px;
+  margin: 0px;
+  padding: 0px;
+}
+
+box {
+  padding: 3px;
+  margin: 4px;
+  border-radius: 2px;
+}
+
+label {
+  margin: 0px;
+  padding: 0px;
+}
+
+.visualizer-container {
+  background-color: transparent;
+}
+
+.visualizer {
+  color: #7493cf;
+  font-family: monospace;
+  background-color: transparent;
+  font-size: 6px;
+}
+
+.visualizer-container {
+  background: linear-gradient(to top, rgba(25, 25, 25, 0.05), rgba(25, 25, 25, 0.025));
+}
+
+.visualizer-text {
+  font-family: monospace;
+  font-size: 6px;
+  color: #7493cf;
+}
+
+.system_label_top {
+  margin-top: 20px;
+}
+
+.system_label_bottom {
+  margin-bottom: 20px;
+}

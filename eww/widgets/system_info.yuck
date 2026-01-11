@@ -1,0 +1,50 @@
+(defwidget cpu_widget []
+  (box
+    :orientation "vertical"
+    :style "border: 1px solid #537ccc;"
+    :height 50
+    (label :text "[CPU_LOAD]" :valign "start" :class "system_label_top")
+    (progress :value cpu_usage :halign "center" :valign "center" :orientation "vertical" :flipped true :vexpand false :height 20)
+    (label :text "${cpu_usage}%" :valign "end" :class "system_label_bottom")))
+
+(defwidget ram_widget []
+  (box
+    :orientation "vertical"
+    :style "border: 1px solid #537ccc;"
+    :height 50
+    (label :text "[MEMORY_LOAD]" :valign "start" :class "system_label_top")
+    (progress :value ram_usage :halign "center" :valign "center" :orientation "vertical" :flipped true :vexpand false)
+    (label :text "${ram_usage}%" :valign "end" :class "system_label_bottom")))
+
+(defwidget storage_widget []
+  (box
+    :orientation "vertical"
+    :style "border: 1px solid #537ccc;"
+    :height 50
+    (label :text "[STORAGE_USED]" :valign "start" :class "system_label_top")
+    (progress :value storage :halign "center" :valign "center" :orientation "vertical" :flipped true :vexpand false)
+    (label :text "${storage}%" :valign "end" :class "system_label_bottom")))
+
+(defwidget uptime_widget []
+  (box
+    :orientation "horizontal"
+    :style "border: 1px solid #537ccc;"
+    (label :text "[TIME_AWAKE] ${uptime}" :halign "center")))
+
+(defwidget cpu_temp_widget []
+  (box
+    :orientation "horizontal"
+    :style "border: 1px solid #537ccc;"
+    (label :text "[CORE_TEMP] ${cpu_temp}°C" :style cpu_color)))
+
+(defwidget gpu_temp_widget []
+  (box
+    :orientation "horizontal"
+    :style "border: 1px solid #537ccc;"
+    (label :text "[GPU_TEMP] ${gpu_temp}°C")))
+
+(defwidget power_widget []
+  (box
+    :orientation "horizontal"
+    :style "border: 1px solid #537ccc;"
+    (label :text "[GPU_POWER] ${power_draw}W")))
