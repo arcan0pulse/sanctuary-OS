@@ -1,22 +1,30 @@
+# hypr
+Config files for both hyprland itself and hyprpaper. Takes care of auto-starting the desktop widgets, necessary scripts, wallpapers and boot sound, all those things. Also sets alacritty as the default terminal, so install that unless you want to use something else.
+
+# fastfetch
+Includes a little ASCII version of the sanctuary OS logo for fastfetch.
+
+# alacritty
+Terminal config for text and background colors and such. Also runs fastfetch on opening a terminal.
+
 # cava
 Config files for [CAVA](https://github.com/karlstav/cava). Unless you know what you're doing, just leave the output section alone, as the script for eww relies on it.
 
 # eww
-Config files for a set of desktop widgets. I only tested them for 1920x1080 monitors, it may look a bit small on higher resolutions.
-For the CAVA audio visualizer to properly work, CAVA needs to be running with the config from this repository, as well as `audio_visualizer.py`
-inside of `eww/scripts`.
+Config files for a set of desktop widgets. Your monitor needs to be set to scale 1 or lower in hyprland else the widget is too tall for your screen,
+and I only tested on 1920x1080 resolutions. I'm sorry if it doesn't work on your monitor, e-mail me if you need help.
+The visualizer requires cava and the script `audio_visualizer.py` to be running. The hyprland config in this repo starts them both on login.
 
 <img width="200" height="400" alt="eww" src="https://github.com/user-attachments/assets/ca425c05-8126-4dfb-bad9-4be8b97b10e9" />
 
 I'm not sure if the temperature readings will work on a different computer than mine.
 There are a few packages that you will need to run it:
  - `lm-sensors`
- - `cava`
  - `alsa-utils`
  - `playerctl`
 
 # sddm-sanctuary
-Login theme for SDDM. Put the entire folder into your SDDM theme folder (usually at `/usr/share/sddm/themes`). 
+Login theme for SDDM. Put the entire folder into your SDDM theme folder (usually at `/usr/share/sddm/themes`). You also need to [set your SDDM to use the theme](https://wiki.archlinux.org/title/SDDM#Theme_settings).
 
 ![login](https://github.com/user-attachments/assets/d32eba2e-fd43-4c1e-974c-4411341ced17)
 
