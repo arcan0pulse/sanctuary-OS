@@ -17,8 +17,8 @@
 // along with Sugar Dark. If not, see <https://www.gnu.org/licenses/>.
 //
 
-import QtQuick 2.11
-import QtQuick.VirtualKeyboard 2.3
+import QtQuick
+import QtQuick.VirtualKeyboard
 
 InputPanel {
     id: virtualKeyboard

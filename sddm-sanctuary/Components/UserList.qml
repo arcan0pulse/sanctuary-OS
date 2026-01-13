@@ -17,9 +17,9 @@
 // along with Sugar Dark. If not, see <https://www.gnu.org/licenses/>.
 //
 
-import QtQuick 2.11
-import QtQuick.Controls 2.4
-import QtGraphicalEffects 1.0
+import QtQuick
+import QtQuick.Controls
+import Qt5Compat.GraphicalEffects
 
 Item {
     id: usernameField
@@ -61,7 +61,7 @@ Item {
             }
             highlighted: parent.highlightedIndex === index
             background: Rectangle {
-                color: selectUser.highlightedIndex === index ? root.palette.highlight : "transparent"
+                color: "transparent"
             }
         }
 
@@ -77,6 +77,10 @@ Item {
                 enabled: false
                 icon.color: root.palette.text
                 icon.source: Qt.resolvedUrl("../Assets/User.svgz")
+		background: Rectangle {
+			color: "transparent"
+			border.color: "transparent"
+		}
         }
 
         background: Rectangle {

@@ -11,7 +11,7 @@ DEFAULT_WIDTH  = 64
 DEFAULT_HEIGHT = 12
 DEFAULT_FPS    = 30
 DEFAULT_DECAY  = 0.92               # lower → longer trails
-CHARS = ["⠀", "░", "▒", "▓", "█", "█", "█"]   # ascending intensity
+CHARS = ["░","▓", "█", "█"]   # ascending intensity
 
 
 def parse_frame(line: str, width: int) -> list[int]:

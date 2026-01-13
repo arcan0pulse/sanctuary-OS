@@ -1,0 +1,51 @@
+{
+  "logo": {
+    "source": "~/.config/fastfetch/logo.txt",
+    "color": {
+      "1": "blue",
+      "2": "blue"
+    }
+  },
+  "display": {
+    "color": {
+      "keys": "blue",      // Module names (OS:, Kernel:, etc.)
+      "output": "blue",    // Module values
+      "title": "blue",      // Title bar
+      "separator": "blue"  // Separator line
+    },
+    "percent": {
+      "color": {
+        "green": "blue",
+        "yellow": "blue",
+        "red": "blue"
+      }
+    }
+  },
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "display",
+    "de",
+    "wm",
+    "wmtheme",
+    "theme",
+    "icons",
+    "font",
+    "cursor",
+    "terminal",
+    "terminalfont",
+    "cpu",
+    "gpu",
+    "memory",
+    "disk",
+    "localip",
+    "battery",
+    "poweradapter",
+    "locale"
+  ]
+}
