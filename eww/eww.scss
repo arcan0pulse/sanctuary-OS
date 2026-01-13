@@ -1,20 +1,29 @@
 window {
-  background: linear-gradient(to bottom, rgb(255, 255, 255), #becce8);
+  background:
+    radial-gradient(circle farthest-side at 0% 50%, #dbe6ff 23.5%,transparent 0)calc(40px*0.7) 40px,
+    radial-gradient(circle farthest-side at 0% 50%,#e8f0ff 24%,transparent 0)calc(40px*19/30) 40px,
+    linear-gradient(#dbe6ff 14%,transparent 0, transparent 85%, #dbe6ff 0)0 0,
+    linear-gradient(150deg, #dbe6ff 24%,#e8f0ff 0,#e8f0ff 26%,transparent 0,transparent 74%,#e8f0ff 0,#e8f0ff 76%, #dbe6ff 0)0 0,
+    linear-gradient(30deg, #dbe6ff 24%,#e8f0ff 0,#e8f0ff 26%,transparent 0,transparent 74%,#e8f0ff 0,#e8f0ff 76%, #dbe6ff 0)0 0,
+    linear-gradient(90deg,#e8f0ff 2%, #dbe6ff 0, #dbe6ff 98%,#e8f0ff 0%)0 0 #dbe6ff;
+  background-size:calc(40px*4/3) calc(40px*2);
   border: 4px solid white;
-  border-image: linear-gradient(125deg, #7383c7,#95b6de) 1;
-  color: #537ccc;
-  font-family: "JetBrains Mono", "Fira Code", monospace;
+  border-image: linear-gradient(225deg, #bedbff, #7383c7) 1;
+  color: #154cbb;
+  font-family: "monospace";
   font-size: 11px;
 }
 
 progress {
-  background-color: rgb(60, 255, 220);
-  min-width: 30px;
+  background-color: #537ccc;
+  border: 1px solid #303030;
+  min-width: 28px;
 }
 
 progressbar > * {
   min-width: 30px;
   border-radius: 0;
+  background-color: #303030;
 }
 
 progressbar {
@@ -26,7 +35,6 @@ progressbar {
 box {
   padding: 3px;
   margin: 4px;
-  border-radius: 2px;
 }
 
 label {
@@ -59,6 +67,16 @@ label {
   margin-top: 20px;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .system_label_bottom {
   margin-bottom: 20px;
+}
+
+.clip-border {
+  border: 2px solid transparent;
+  border-image: 
+    linear-gradient(45deg, transparent 5%, #537ccc 5%, #537ccc 95%, transparent 95%) 2 stretch;
 }

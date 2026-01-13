@@ -16,7 +16,7 @@
       :orientation "vertical"
       (box 
         :orientation "vertical"
-        (label :text "SANCTUARY/OS MAINFRAME" :style "font-size: 14px;")
+        (label :text "SANCTUARY/OS MAINFRAME" :style "font-size: 16px; font-weight: bold;")
         (label :text "NOW PLAYING: ${current_song}")
       )
       (audio-visualizer)
@@ -29,13 +29,13 @@
         (uptime_widget)
         (power_widget))
       (label :text
-"          #########  ###    ###  ########   ########    ###    ###
-         ###    ### ###    ### ###    ### ###    ###   ###   ###  
-        ###    ### ###    ### ###        ###    ###   ###  ###    
-       ###    ### ###    ### ########## ###    ###   #######      
-      ###    ### ###    ###        ### ###    ###   ###  ###      
-     ###    ### ###    ### ###    ### ###    ###   ###   ###      
-    #########   ########   ########   ########### ###    ###      ")
+"          777777777   777    777   77777777    77777777     777    777
+         777    777  777    777  777    777  777    777    777   777  
+        777    777  777    777  777         777    777    777  777    
+       777    777  777    777  7777777777  777    777    7777777      
+      777    777  777    777         777  777    777    777  777      
+     777    777  777    777  777    777  777    777    777   777      
+    777777777    77777777    77777777    77777777777  777    777      ")
       (box
         :orientation "horizontal"
         (cpu_temp_widget)
