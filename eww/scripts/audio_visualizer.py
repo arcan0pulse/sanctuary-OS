@@ -9,8 +9,8 @@ import numpy as np
 # ── Default visual parameters ───────────────────────────────────────────────
 DEFAULT_WIDTH  = 64
 DEFAULT_HEIGHT = 12
-DEFAULT_FPS    = 30
-DEFAULT_DECAY  = 0.92               # lower → longer trails
+DEFAULT_FPS    = 60
+DEFAULT_DECAY  = 0.5               # lower → longer trails
 CHARS = ["⠀", "░", "▒", "▓", "█", "█", "█"]   # ascending intensity
 
 

@@ -2,22 +2,26 @@
   "logo": {
     "source": "~/.config/fastfetch/logo.txt",
     "color": {
-      "1": "blue",
-      "2": "blue"
+      "1": "#2F6FDB",
+      "2": "#2F6FDB"
+    },
+    "padding": {
+      "left": 1,
+      "top" : 1
     }
   },
   "display": {
     "color": {
-      "keys": "blue",      // Module names (OS:, Kernel:, etc.)
-      "output": "blue",    // Module values
-      "title": "blue",      // Title bar
-      "separator": "blue"  // Separator line
+      "keys": "#1C2B3A",      // Module names (OS:, Kernel:, etc.)
+      "output": "#2F6FDB",    // Module values
+      "title": "#1C2B3A",      // Title bar
+      "separator": "#2F6FDB"  // Separator line
     },
     "percent": {
       "color": {
-        "green": "blue",
-        "yellow": "blue",
-        "red": "blue"
+        "green": "#2F6FDB",
+        "yellow": "#2F6FDB",
+        "red": "#2F6FDB"
       }
     }
   },
@@ -46,6 +50,10 @@
     "localip",
     "battery",
     "poweradapter",
-    "locale"
+    "locale",
+    "break",
+    "break",
+    "break",
+    "colors"
   ]
 }

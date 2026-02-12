@@ -1,13 +1,11 @@
 (defwindow audio_status
   :anchor "top right"
-  :geometry (geometry :x "79px" :y "288px" :width "250px" :height "40px")
+  :geometry (geometry :x "79px" :y "288px" :width "200px" :height "40px")
   :stacking "bg"
   :monitor 0
   :exclusive false
   :focusable false
 
   (box :orientation "vertical" :halign "end"
-(label :text ascii_audio_status :class "ascii-core-status")
-
-  )
+    (label :text ascii_audio_status :class "ascii-core-status"))
 )

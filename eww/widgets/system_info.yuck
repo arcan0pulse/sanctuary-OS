@@ -1,3 +1,5 @@
+(defvar blue "#1C2B3A")
+
 (defwidget cpu_widget []
   (box
     :orientation "vertical"
@@ -11,7 +13,7 @@
   (box
     :orientation "vertical"
     :class "clip-border"
-    :height 50
+    :height 40
     (label :text "[MEMORY_LOAD]" :valign "start" :class "system_label_top bold")
     (progress :value ram_usage :halign "center" :valign "center" :orientation "vertical" :flipped true :vexpand false)
     (label :text "${ram_usage}%" :valign "end" :class "system_label_bottom")))
@@ -20,7 +22,7 @@
   (box
     :orientation "vertical"
     :class "clip-border"
-    :height 50
+    :height 40
     (label :text "[STORAGE_USED]" :valign "start" :class "system_label_top bold")
     (progress :value storage :halign "center" :valign "center" :orientation "vertical" :flipped true :vexpand false)
     (label :text "${storage}%" :valign "end" :class "system_label_bottom")))
@@ -29,22 +31,22 @@
   (box
     :orientation "horizontal"
     :class "clip-border"
-    (label :text "[TIME_AWAKE] ${uptime}" :halign "center" :class "bold")))
+    (label :markup "<span foreground='${blue}'><b>[TIME_AWAKE]</b></span> ${uptime}" :halign "center" :class "bold")))
 
 (defwidget cpu_temp_widget []
   (box
     :orientation "horizontal"
     :class "clip-border"
-    (label :text "[CORE_TEMP] ${cpu_temp}°C" :style cpu_color :class "bold")))
+    (label :markup "<span foreground='${blue}'><b>[CORE_TEMP]</b></span> ${cpu_temp}°C" :style cpu_color :class "bold")))
 
 (defwidget gpu_temp_widget []
   (box
     :orientation "horizontal"
     :class "clip-border"
-    (label :text "[GPU_TEMP] ${gpu_temp}°C" :class "bold")))
+    (label :markup "<span foreground='${blue}'><b>[GPU_TEMP]</b></span> ${gpu_temp}°C" :class "bold")))
 
 (defwidget power_widget []
   (box
     :orientation "horizontal"
     :class "clip-border"
-    (label :text "[GPU_POWER] ${power_draw}W" :class "bold")))
+    (label :markup "<span foreground='${blue}'><b>[GPU_POWER]</b></span> ${power_draw}W" :class "bold")))

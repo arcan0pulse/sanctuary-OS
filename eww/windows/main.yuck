@@ -1,9 +1,8 @@
 (defwindow main
   :geometry (geometry :x "5px"
-                      :y "0px"
-                      :height "93%"
+                      :height "96%"
                       :anchor "center right"
-                      :width "500px"
+                      :width "430px"
                       :hexpand false)
   :monitor 0
   :focusable false
@@ -16,8 +15,9 @@
       :orientation "vertical"
       (box 
         :orientation "vertical"
-        (label :text "SANCTUARY/OS MAINFRAME" :style "font-size: 16px; font-weight: bold;")
-        (label :text "NOW PLAYING: ${current_song}")
+        (label :markup "<span size='xx-large'><b>SANCTUARY//STATUS</b></span>
+
+<span size='x-large'>🎧</span> NOW PLAYING: ${current_song}" :halign "center" :justify "center")
       )
       (audio-visualizer)
     )
@@ -28,14 +28,14 @@
         :orientation "horizontal"
         (uptime_widget)
         (power_widget))
-      (label :text
-"          777777777   777    777   77777777    77777777     777    777
-         777    777  777    777  777    777  777    777    777   777  
-        777    777  777    777  777         777    777    777  777    
-       777    777  777    777  7777777777  777    777    7777777      
-      777    777  777    777         777  777    777    777  777      
-     777    777  777    777  777    777  777    777    777   777      
-    777777777    77777777    77777777    77777777777  777    777      ")
+      (label :markup
+"<span size='small'>       #########   ###    ###   ########    ########     ###    ### 
+      ###    ###  ###    ###  ###    ###  ###    ###    ###   ###   
+     ###    ###  ###    ###  ###         ###    ###    ###  ###     
+    ###    ###  ###    ###   ########   ###    ###    #######       
+   ###    ###  ###    ###         ###  ###    ###    ###  ###       
+  ###    ###  ###    ###  ###    ###  ###    ###    ###   ###       
+ #########    ########    ########    ###########  ###    ###       </span>")
       (box
         :orientation "horizontal"
         (cpu_temp_widget)

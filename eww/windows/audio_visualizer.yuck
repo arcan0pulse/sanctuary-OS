@@ -1,6 +1,6 @@
 (defwindow audio_status
   :anchor "top right"
-  :geometry (geometry :x "79px" :y "288px" :width "250px" :height "40px")
+  :geometry (geometry :x "79px" :y "288px" :width "200px" :height "40px")
   :stacking "bg"
   :monitor 0
   :exclusive false
@@ -14,7 +14,7 @@
 
 (defwindow visualizer_window
   :monitor 0
-  :geometry (geometry :x 38 :y 143 :width 340 :height 150)
+  :geometry (geometry :x 38 :y 143 :width 240 :height 150)
   :layer "bottom"
   :stacking "bg"
   :focusable false

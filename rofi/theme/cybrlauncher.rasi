@@ -1,0 +1,19 @@
+* {
+	background:						#f7fafd;
+	background-full:				#030408FF;
+	foreground:						#1C2B3A;
+	accent:							#A9C4EB;
+	background-tb:					#EEF4FA;
+	border-tb:						#2F6FDB;
+	background-none:				#0000ff;
+	selected:						linear-gradient(to right, #5A8DEE, #4A5F78);
+	button:							linear-gradient(#F7504930);
+	button-selected:				linear-gradient(#F7504930);
+	active:							linear-gradient(to right, #5A8DEE, #4A5F78);
+	urgent:							#F46D2A;
+	font:							"GeistMono Nerd Font 12";
+	gap:							8px;
+	radius:							0px;
+	no0:							#030408;
+	cy0:							#5A8DEE;
+}

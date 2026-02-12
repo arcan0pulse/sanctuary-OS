@@ -1,0 +1,352 @@
+/* === VARIABLES === */
+
+@define-color primary-bg-color #f7fafd;
+@define-color secondary-bg-color #EEF4FA;
+@define-color tertiary-bg-color #E3ECF6;
+@define-color primary-fg-color #2F6FDB;
+@define-color secondary-fg-color #5A8DEE;
+@define-color tertiary-fg-color #1F4FB2;
+@define-color divider-color #A9C4EB;
+@define-color primary-text-color #1C2B3A;
+@define-color secondary-text-color #4A5F78;
+@define-color disabled-text-color #8C9DB2;
+
+/* === GLOBAL === */
+
+* {
+	font-family: GeistMono Nerd Font;
+	font-size: 13px;
+	letter-spacing: -0.05em;
+	font-weight: 400;
+	min-height: 0;
+}
+
+window#waybar {
+	background: transparent;
+	opacity: 1;
+}
+
+window#waybar.hidden {
+	opacity: 0;
+}
+
+
+/* === MODULE DEFAULTS === */
+
+#custom-updates,
+#custom-music,
+#custom-arch,
+#workspaces,
+#window {
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+	padding: 0 16px;
+	color: @secondary-fg-color;
+}
+
+
+/* === BUTTON SIZE === */
+
+#tray,
+#custom-brightness,
+#language,
+#bluetooth,
+#custom-gpu-usage,
+#custom-wf-recorder,
+#custom-updates,
+#custom-notifications,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#temperature,
+#temperature.cpu,
+#temperature.gpu,
+#battery,
+#backlight {
+	padding: 0 16px;
+	min-width: 15px;
+}
+
+
+/* === POWERLINE ARROWS === */
+
+#custom-arrow-left-no1 {
+	background-image: url('svg/w1-left.svg');
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+
+#custom-arrow-right-no1 {
+	background-image: url('svg/w1-right.svg');
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+
+#custom-arrow-left-re0 {
+	background-image: url('svg/bl1-left.svg');
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-color: @primary-bg-color;
+	padding-right: 0px;
+}
+
+#custom-arrow-right-re0 {
+	background-image: url('svg/bl1-right.svg');
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-color: @primary-bg-color;
+	padding-left: 0px;
+}
+
+#custom-arrow-left-gr0 {
+	background-image: url('svg/bl1-left.svg');
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+
+#custom-arrow-right-gr0 {
+	background-image: url('svg/bl1-right.svg');
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+
+
+/* === ARCH LOGO === */
+
+#custom-arch {
+	color: @primary-text-color;
+	background-color: @secondary-fg-color;
+	font-weight: bold;
+}
+
+#custom-arch:hover {
+	color: @primary-bg-color;
+}
+
+
+/* === WORKSPACES === */
+
+#workspaces {
+	background-color: @primary-bg-color;
+	border: none;
+}
+
+#workspaces button {
+	border-radius: 0;
+	border: none;
+	margin: 0;
+	min-width: 30px;
+	font-weight: bolder;
+	color: @secondary-fg-color;
+	background: transparent;
+}
+
+#workspaces button label {
+	font-size: 13px;
+	padding: 0 10px;
+	color: @disabled-text-color;
+}
+
+#workspaces button.active label {
+	color: @primary-text-color;
+}
+
+#workspaces button.active {
+	background-color: @tertiary-bg-color;
+}
+
+#workspaces button:hover {
+	color: @primary-text-color;
+	background-color: @secondary-fg-color;
+}
+
+#workspaces button:hover label {
+	color: @primary-text-color;
+}
+
+#workspaces button.active:hover {
+	background-color: @secondary-fg-color;
+}
+
+#workspaces button.active label {
+	color: @primary-text-color;
+}
+
+#workspaces button.urgent {
+	background-color: @secondary-text-color;
+}
+
+#workspaces button.urgent label {
+	color: @secondary-text-color;
+}
+
+/* === CLOCKS === */
+
+#clock.time,
+#clock.date {
+	color: @primary-text-color;
+	background-color: @primary-bg-color;
+	padding: 0 32px;
+}
+
+#clock.time:hover,
+#clock.date:hover {
+	background-color: @secondary-fg-color;
+}
+
+/* === NETWORK & AUDIO === */
+
+#network {
+	background-color: @primary-bg-color;
+	color: @primary-text-color;
+}
+
+#network.disconnected {
+	color: @primary-bg-color;
+	background-color: @primary-text-color;
+}
+
+#network.linked {
+	color: @primary-text-color;
+	background-color: @secondary-fg-color;
+}
+
+#pulseaudio {
+	color: @primary-text-color;
+	background-color: @primary-bg-color;
+}
+
+#pulseaudio.muted {
+	color: @secondary-text-color;
+}
+
+#network:hover,
+#pulseaudio:hover {
+	color: @primary-text-color;
+	background-color: @secondary-fg-color;
+}
+
+#pulseaudio.muted:hover {
+	color: @primary-text-color;
+	background-color: @tertiary-fg-color;
+}
+
+
+/* === MUSIC === */
+
+#custom-music {
+	background-color: @primary-bg-color;
+	color: @primary-text-color;
+	padding: 0 32px;
+	border: none;
+}
+
+
+/* === NOTIFICATIONS === */
+
+#custom-notifications {
+	background-color: @wh1;
+	color: @primary-text-color;
+	font-size: 13px;
+}
+
+#custom-notifications:hover {
+	color: @primary-text-color;
+	background-color: @bl1;
+}
+
+#custom-notifications.dnd-none {
+	color: @primary-text-color;
+}
+
+#custom-notifications.dnd-none:hover {
+	color: @primary-text-color;
+	background-color: @bl2;
+}
+
+/* === UPDATES === */
+
+#custom-updates {
+	color: @primary-text-color;
+	font-size: 13px;
+	margin: 0 20px;
+}
+
+#custom-updates:hover {
+	background-color: @gr1;
+}
+
+
+/* === MISC === */
+
+#custom-wf-recorder {
+	color: @primary-text-color;
+	background-color: @wh1;
+}
+
+#bluetooth {
+	color: @primary-text-color;
+	background-color: @wh1;
+}
+
+#language {
+	color: @primary-text-color;
+	background-color: @primary-bg-color;
+}
+
+#custom-brightness {
+	background-color: @primary-bg-color;
+}
+
+#custom-brightness:hover {
+	background-color: @secondary-fg-color;
+}
+
+#custom-brightness.max {
+	color: @primary-text-color;
+}
+
+#custom-brightness.high {
+	color: @primary-text-color;
+}
+
+#custom-brightness.mid {
+	color: @primary-text-color;
+}
+
+#custom-brightness.low {
+	color: @primary-text-color;
+}
+
+#custom-brightness.min {
+	color: @primary-text-color;
+}
+
+#tray {
+	color: @primary-text-color;
+	background-color: @secondary-fg-color;
+}
+
+#custom-wf-recorder:hover,
+#bluetooth:hover,
+#language:hover {
+	color: @primary-text-color;
+	background-color: @secondary-fg-color;
+}
+
+/* === WINDOW === */
+
+#window {
+	color: @primary-text-color;
+	background-color: @secondary-fg-color;
+	padding: 0 32px;
+	border: none;
+}
