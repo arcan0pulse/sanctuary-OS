@@ -60,6 +60,9 @@ It's set to run on startup in `hypr/hyprland.conf`. Hyprland looks for this scri
 
 # firefox
 
+<img width="1069" height="629" alt="image" src="https://github.com/user-attachments/assets/8c33a243-6c2e-4d86-8b0b-87784297c6ec" />
+Note the true transparency on the side and top bar. If you use a different background with blue-ish colors, it might make things hard to read/see.
+
 You have to enable custom themes on firefox first. First, go to `about:config` and search for `toolkit.legacyUserProfileCustomizations.stylesheets`, and set it to true.
 Afterwards, restart firefox and go to `about:profiles`. Open the shown directory (root, not local), locate the folder `chrome` and place `userChrome.css` in that folder.
 
