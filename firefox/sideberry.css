@@ -1,0 +1,65 @@
+#root.root {--toolbar-scrollbar-color: #3584e4ff;}
+
+#root.root {--tabs-color-layer-opacity: 1;}
+#root.root {--tabs-activated-color-layer-opacity: 1;}
+#root.root {--tabs-discarded-favicon-opacity: 0.7;}
+#root.root {--tabs-discarded-title-opacity: 0.7;}
+#root.root {--tabs-lvl-opacity: 1;}
+
+#root.root {
+  --tabs-font: 0.95rem "GeistMono Nerd Font", monospace;
+  --tabs-normal-bg: transparent;
+  --frame-fg: #2539d4;
+  --frame-bg: transparent !important;
+
+  --active-el-bg: transparent;
+  --tabs-border-radius: 0;
+  --tabs-margin: 1px;
+  --tabs-height: 30px;
+  --tabs-inner-gap: 5px;
+
+  --tabs-normal-fg: #299bff;
+
+  --tabs-activated-fg: #efefef;
+  --tabs-activated-bg: #299bff;
+
+  --ctx-menu-fg: #d8e8ed;
+  --ctx-menu-separator: #ffffff;
+  --ctx-menu-border: #ffffff;
+  --ctx-menu-bg: #2539d4;
+}
+
+:root {
+  background-color: transparent !important;
+
+  --notchXs: 6px;
+  --tabs-font: "GeistMono Nerd Font", monospace;
+  --tabs-height: 32px;
+  --tabs-padding: 4px;
+}
+
+/* NOTCH & HOVER */
+.Tab {
+  background-color: transparent !important;
+  color: #F75049 !important;
+  clip-path: polygon(
+    0% var(--notchXs), 
+    var(--notchXs) 0%, 
+    100% 0%, 
+    100% calc(100% - var(--notchXs)),
+    calc(100% - var(--notchXs)) 100%,
+    0px 100%,
+    0% calc(100% - 0px)
+  ) !important;
+
+  &:hover {
+    background-color: #dbf6ff99 !important;
+    cursor: pointer !important;
+  }
+}
+
+.Tab:active{
+  &:hover {
+    color: red !important;
+  }
+}
