@@ -199,7 +199,7 @@ Pane {
             source: config.background || config.Background
             fillMode: config.ScaleImageCropped == "true" ? Image.PreserveAspectCrop : Image.PreserveAspectFit
             asynchronous: true
-            cache: true
+            cache: false
             clip: true
             mipmap: true
         }
